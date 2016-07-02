@@ -3,8 +3,9 @@ layout: default
 permalink: /
 ---
 
-
+    {% include navicon.html%}
 <div class="content">
+    {% include mobilenav.html %}
     {% include nav.html %}
     {% if site.front_img %}
        <img src="{{ site.front_img_path }}" id="fullscreen">

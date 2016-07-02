@@ -10,17 +10,61 @@
         
         <link rel="shortcut icon" href="imgs/favicon.ico" />
         
-        <link rel="stylesheet" href="css/front.css">
+        <link rel="stylesheet" href="/css/front.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="/_includes/syntactic.js"></script>
+        <script   src="https://code.jquery.com/jquery-3.0.0.slim.min.js"   integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0="   crossorigin="anonymous"></script>
+
     </head>
 
     <body>
-            <div class="content">
+                <nav class="nav-container">
+	<div class="nav-icon cross">
+		<div class="span"></div>
+	</div> 
+</nav>
+<div class="content">
+    <div class="sideMenu">
+    <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+    </ul>
+</div>
+<script>
+$(document).ready(function() {
+  $(".nav-icon").click(function(){
+    $("body").toggleClass("sideOpen");
+  });
+});
+
+$(function(){
+ var obj = document.querySelectorAll('.nav-icon');
+  for(var i = obj.length -1;i>=0;i--){
+      var toggle = obj[i];
+      toggleactive(toggle);
+  }
+  
+  function toggleactive(toggle) {
+    toggle.addEventListener("click",function() {
+      
+      if(this.classList.contains("active") === true) {
+        this.classList.remove("active");
+      }
+      else {
+        this.classList.add("active");
+      }
+    });
+  }
+});
+</script>
     
 <div class="nav-container">
 <nav>
-    <ul class="list-inline nav navbar-nav" style="text-align: center">
+    <ul class="list-inline nav navbar-nav top" style="text-align: center">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/portfolio.html">Portfolio</a></li>
         <li><a href="/services.html">Services</a></li>
@@ -39,14 +83,14 @@
     <h1>Residential and Commercial Design and Repair</h1>
     <br>
 <a href="https://www.facebook.com/SacCityGlass/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
-<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
 <a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
 
 <br>
     
 <div class="nav-container">
 <nav>
-    <ul class="list-inline nav navbar-nav" style="text-align: center">
+    <ul class="list-inline nav navbar-nav top" style="text-align: center">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/portfolio.html">Portfolio</a></li>
         <li><a href="/services.html">Services</a></li>
